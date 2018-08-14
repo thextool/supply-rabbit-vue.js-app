@@ -1,6 +1,6 @@
 # landing-page
 
-> A Vue.js project
+Deployed Front end liink: https://supply-rabbit.firebaseapp.com/#/
 
 ## Build Setup
 
