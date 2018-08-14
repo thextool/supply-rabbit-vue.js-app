@@ -1,9 +1,9 @@
 <template>
     <div id="Header">
-        <h1 class="mdc-typography--headline3">Supply Rabbit</h1>
+        <router-link to="/"><h1>Supply Rabbit</h1></router-link>
         <nav>
-            <a href="#">Teachers</a>
-            <a href="#">Donors</a>
+            <router-link to="teachers">Teachers</router-link>
+            <router-link to="donations">Donations</router-link>
         </nav>
     </div>
 </template>
