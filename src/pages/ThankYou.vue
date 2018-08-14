@@ -1,33 +1,28 @@
 <template>
-<div>
-    <Header />
-    <div id="Main">
-        <h1>Main</h1>
-        </div>
-    <Footer />
+<div class="font">
+  <h1>Thank You</h1>
+  <p>Send donation to NAME OF THE SCHOOL</P>
+  <router-link to='donations'>DONATE MORE</router-link>
+  <router-link to='/'>HOME</router-link>    
 </div>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 export default {
-name: "LandingPage",
-components: {
-    Header: Header,
-    Footer: Footer
-}
+name: "ThankYou",
 };
 </script>
 
 <style>
+.font{
+  margin-top: 10%;
+  color: #ffffff;
+}
 body {
 background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
 background-size: cover;
 height: 100%;
-}
-h1 {
-color: white;
 }
 </style>
