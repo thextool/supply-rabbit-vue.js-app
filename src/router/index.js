@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import LandingPage from '@/pages/LandingPage';
-// import Teachers from '@/pages/Teachers';
+import Teachers from '@/pages/Teachers';
 // import TeacherRequest from '@/pages/TeacherRequest';
 import Donations from '@/pages/Donations';
 import DonationCheckout from '@/pages/DonationCheckout';
@@ -16,11 +16,11 @@ export default new Router({
       name: 'LandingPage',
       component: LandingPage,
     },
-    // {
-    //   path: '/teachers',
-    //   name: 'Teachers',
-    //   component: Teachers,
-    // },
+    {
+      path: '/teachers',
+      name: 'Teachers',
+      component: Teachers
+    },
     // {
     //   path: '/teachers/request',
     //   name: 'TeacherRequest',

@@ -28,7 +28,7 @@ export default {
         width: 100%;
     }
     nav a {
-        border: 1px solid black;
+        border: 1px solid white;
         padding: 5px;
         color: white;
     }

@@ -1,22 +1,13 @@
 <template>
 <div>
-    <Header />
-    <div id="Main">
-        <h1>Main</h1>
-        </div>
-    <Footer />
+    <div id="Main"><h1>Brochure</h1></div>
+    <router-view/>
 </div>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 export default {
 name: "LandingPage",
-components: {
-    Header: Header,
-    Footer: Footer
-}
 };
 </script>
 
@@ -29,5 +20,13 @@ height: 100%;
 }
 h1 {
 color: white;
+}
+#Main {
+    border: 5px solid white;
+    position: absolute;
+    height: 20vw;
+    width: 40vw;
+    left: 30vw;
+    top: 20vw;
 }
 </style>
