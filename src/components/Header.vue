@@ -1,9 +1,9 @@
 <template>
     <div id="Header">
-        <h1 class="mdc-typography--headline3">Supply Rabbit</h1>
+        <router-link to="/"><h1>Supply Rabbit</h1></router-link>
         <nav>
-            <a href="#">Teachers</a>
-            <a href="#">Donors</a>
+            <router-link to="teachers">Teachers</router-link>
+            <router-link to="donationspage">Donate</router-link>
         </nav>
     </div>
 </template>
@@ -28,7 +28,7 @@ export default {
         width: 100%;
     }
     nav a {
-        border: 1px solid black;
+        border: 1px solid white;
         padding: 5px;
         color: white;
     }
