@@ -2,9 +2,7 @@
 <div class='cards-container'>
     
     <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
+   
 
 
 </div>
@@ -22,14 +20,10 @@ components:{
 </script>
 
 <style>
-.cards-container{
-    
+.cards-container{   
     margin: 10%;
     display: flex;
-    flex-wrap: wrap;
-
-    
-    
+    flex-wrap: wrap;    
 }
 body {
 background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),

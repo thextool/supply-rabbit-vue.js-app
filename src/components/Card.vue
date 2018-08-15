@@ -1,12 +1,13 @@
 <template>
-<router-link to='checkout'>
+ <router-link to='checkout'> 
   <div id= 'card' class='donations-card'>
-      <h5>{{school_name}}</h5>
-      <h6>{{teachers_name}}</h6>
+    
+      <h5>{{result}}
+      <!-- <h6>{{}}</h6>
       <p>Items</p>
       <ul >
        <li v-for="item in supply_name" :key="item.id" class="font">{{item}}</li>
-      </ul>
+      </ul> --> 
 
     </div>
     </router-link>
@@ -19,12 +20,18 @@ export default {
 name: 'Card',
 data(){
   return{
-    school_name: 'Union Station School',
-    teachers_name:'Anna Simmons',
-    subtitled: 'Items',
-    supply_name:['pencils','Notebooks','markers', 'colored paper']
-  } 
-}
+  methods:{
+    populateCards(){
+      const API_URL = 'https://supply-rabbit-server.herokuapp.com/supplies;'
+      fetch(API_URL)
+      .then(res=>res.json())
+      .then(result=>{
+        console.log(data)
+          })
+        }
+      }
+    };
+  }       
 };
 </script>
 
@@ -38,5 +45,6 @@ data(){
   height: 350px;
   width: 350px;
   margin: 16px;
+  
 }
 </style>
