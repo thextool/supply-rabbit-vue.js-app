@@ -11,6 +11,7 @@
             <input type="text" v-model="address"/>
             <button type="submit">Add Information</button>
         </form>
+
     </div>
     <router-view />
 </div>
@@ -19,6 +20,7 @@
 <script>
 export default {
 name: "Teachers",
+
 data() {
     return {
         name: "",

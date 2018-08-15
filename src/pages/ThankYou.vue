@@ -1,16 +1,23 @@
 <template>
 <div class="font">
   <h1>Thank You</h1>
-  <p>Send donation to NAME OF THE SCHOOL</P>
+  <p>Send donation to 1644 Platte St, Denver, CO 80202</P>
   <router-link to='donations'>DONATE MORE</router-link>
-  <router-link to='/'>HOME</router-link>    
+  <router-link to='/'>HOME</router-link>
+  <div>
+    <GoogleMap/>
+  </div>   
 </div>
 </template>
 
 <script>
+import GoogleMap from "../components/GoogleMap"
 
 export default {
 name: "ThankYou",
+components:{
+    GoogleMap
+},
 };
 </script>
 
