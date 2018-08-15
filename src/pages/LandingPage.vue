@@ -1,7 +1,6 @@
 <template>
 <div>
     <div id="Main"><h1>Brochure</h1></div>
-    <router-view/>
 </div>
 </template>
 

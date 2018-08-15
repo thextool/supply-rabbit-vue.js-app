@@ -1,15 +1,16 @@
 <template>
 <router-link to='checkout'>
   <div id= 'card' class='donations-card'>
-      <h5>School name</h5>
-      <h6>Teacher</h6>
-      <p>Items</p>
-      <ul>
-        <li>Item1</li>
-        <li>Item2</li>
-        <li>Item3</li>
-      </ul>
-
+      <h3>School name</h3>
+      <h4>Teacher</h4>
+      <div class='donation-items'>
+        <p>Items</p>
+        <ul>
+          <li>Item1</li>
+          <li>Item2</li>
+          <li>Item3</li>
+        </ul>
+      </div>
     </div>
     </router-link>
     
@@ -23,13 +24,27 @@ name: 'Card'
 </script>
 
 <style>
-
+li{
+  list-style-position: inside;
+}
+ul {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+.donations-items {
+  display: flex;
+  align-content: flex-start;
+}
+p {
+  color: red;
+}
 .font{
   color: #000000;
 }
 .donations-card {
   background: #ffffff;
-  height: 350px;
-  width: 350px;
+  height: 250px;
+  width: 250px;
 }
 </style>
