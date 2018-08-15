@@ -1,13 +1,11 @@
 <template>
 <router-link to='checkout'>
   <div id= 'card' class='donations-card'>
-      <h5>School name</h5>
-      <h6>Teacher</h6>
+      <h5>{{school_name}}</h5>
+      <h6>{{teachers_name}}</h6>
       <p>Items</p>
-      <ul>
-        <li>Item1</li>
-        <li>Item2</li>
-        <li>Item3</li>
+      <ul >
+       <li v-for="item in supply_name" :key="item.id" class="font">{{item}}</li>
       </ul>
 
     </div>
@@ -18,7 +16,15 @@
 <script>
 
 export default {
-name: 'Card'
+name: 'Card',
+data(){
+  return{
+    school_name: 'Union Station School',
+    teachers_name:'Anna Simmons',
+    subtitled: 'Items',
+    supply_name:['pencils','Notebooks','markers', 'colored paper']
+  } 
+}
 };
 </script>
 
@@ -31,5 +37,6 @@ name: 'Card'
   background: #ffffff;
   height: 350px;
   width: 350px;
+  margin: 16px;
 }
 </style>

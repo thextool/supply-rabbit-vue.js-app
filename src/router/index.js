@@ -19,7 +19,7 @@ export default new Router({
     {
       path: '/teachers',
       name: 'Teachers',
-      component: Teachers
+      component: Teachers,
     },
     // {
     //   path: '/teachers/request',

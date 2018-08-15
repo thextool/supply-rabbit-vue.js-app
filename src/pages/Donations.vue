@@ -1,6 +1,12 @@
 <template>
 <div class='cards-container'>
+    
     <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
+
+
 </div>
 </template>
 
@@ -9,15 +15,20 @@ import Card from "../components/Card";
 export default {
 name: "Donations",
 components:{
-    Card:Card
+    Card:Card,
+    
 }
 };
 </script>
 
 <style>
 .cards-container{
-    margin-top: 20%;
-    margin-left: 10%;
+    
+    margin: 10%;
+    display: flex;
+    flex-wrap: wrap;
+
+    
     
 }
 body {
