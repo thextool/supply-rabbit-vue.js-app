@@ -18,19 +18,35 @@
 
 <script>
 export default {
-name: "Teachers",
-data() {
-    return {
-        name: "",
-        school: "",
-        address: ""
+    name: "Teachers",
+    data() {
+        return {
+            name: "",
+            school: "",
+            address: ""
+        }
+    },
+    methods: {
+        addTeacher(){
+            let teacherObject = {
+                "name": this.name,
+                "school": this.school,
+                "address": this.address,
+                "email": null,
+                "profile_picture": null,
+                "logged_in": null
+            }
+        fetch('https://supply-rabbit-server.herokuapp.com/teachers', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(teacherObject)
+        })
+        .then(response => response.json())
+        .then(teachers => location.replace(`http://localhost:8080/#/request=${teachers.teachers.id}`))
+        }
     }
-},
-methods: {
-    addTeacher(){
-    console.log(this.name, this.school, this.address);
-    } 
-}
 };
 </script>
 
