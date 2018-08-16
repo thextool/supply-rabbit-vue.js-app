@@ -28,11 +28,14 @@ export default {
   margin-top: 60px;
 }
 body {
-background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
-background-size: cover;
+background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.0)),
+    /* url("https://cdn.pixabay.com/photo/2016/09/26/09/58/school-supplies-1695563_1280.jpg"); */
+    url("https://www.maxpixel.net/static/photo/2x/Plastic-Painting-School-Supplies-Color-Tempera-1695564.jpg");
+background-size: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
 height: 100%;
-
+/* overflow: hidden; */
 }
 h1 {
 color: white;

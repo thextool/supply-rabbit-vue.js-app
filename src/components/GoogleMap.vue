@@ -12,6 +12,7 @@
 
     </div>
     <br>
+    <div id="MapContainer">
     <gmap-map
       id="map"
       :center="center"
@@ -25,6 +26,7 @@
         @click="center=m.position"
       ></gmap-marker>
     </gmap-map>
+  </div>
   </div>
 </template>
 
@@ -76,3 +78,10 @@ export default {
 };
 </script>
 
+<style>
+#MapContainer {
+margin-left: 35vw;
+margin-right: 35vw;
+margin-bottom: 10vw;
+}
+</style>
