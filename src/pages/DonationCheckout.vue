@@ -8,7 +8,7 @@
     <ul class="mdc-list">
      <li class='class="mdc-list-item" mdc-typography--body1 font-color'>{{donation.supply_name}}</li>
     </ul>
-    <router-link to="thankyou" class="button mdc-typography--button text-decoration">DONATE</router-link>
+    <router-link to="/thankyou" class="button mdc-typography--button text-decoration">DONATE</router-link>
   </div>
 </template>
 
