@@ -10,21 +10,21 @@ import ThankYou from '@/pages/ThankYou';
 Vue.use(Router);
 
 export default new Router({
-      routes: [
+    routes: [
         {
-          path: '/',
-          name: 'LandingPage',
-          component: LandingPage,
+            path: '/',
+            name: 'LandingPage',
+            component: LandingPage,
         },
         {
-          path: '/teachers',
-          name: 'Teachers',
-          component: Teachers
+            path: '/teachers',
+            name: 'Teachers',
+            component: Teachers
         },
         {
-          path: '/request=:id',
-          name: 'TeacherRequest',
-          component: TeacherRequest,
+            path: '/request=:id',
+            name: 'TeacherRequest',
+            component: TeacherRequest,
         },
         {
             path: '/donations',
@@ -32,12 +32,12 @@ export default new Router({
             component: Donations,
         },
         {
-            path: '/checkout/:id',
+            path: '/checkout=:id',
             name: 'DonationCheckout',
             component: DonationCheckout,
         },
         {
-            path: '/thankyou',
+            path: '/thankyou=:id',
             name: 'ThankYou',
             component: ThankYou,
         },
