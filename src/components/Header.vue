@@ -2,8 +2,8 @@
     <div id="Header">
         <router-link to="/"><h1>Supply Rabbit</h1></router-link>
         <nav>
-            <router-link to="teachers">Teachers</router-link>
-            <router-link to="donations">Donations</router-link>
+            <router-link to="/teachers">Teachers</router-link>
+            <router-link to="/donations">Donations</router-link>
         </nav>
     </div>
 </template>
