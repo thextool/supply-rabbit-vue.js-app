@@ -16,14 +16,15 @@ name: "LandingPage",
 
 <style>
 body {
-background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
-background-size: cover;
-height: 100%;
-/* overflow: hidden; */
 }
-h1 {
+#Main h1 {
 color: white;
+font-size: 3em;
+        text-shadow: 5px 4px 0px rgba(255, 255, 255, 0.25), 4px 3px 0px rgba(0, 0, 0, 0.75);
+}
+#Main h2 {
+    font-size: 2em;
+            text-shadow: 4px 3px 0px rgba(255, 255, 255, 0.15), 3px 2px 0px rgba(0, 0, 0, 0.55);
 }
 #Main {
     color: white;
