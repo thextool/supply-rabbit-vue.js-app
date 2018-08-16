@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <div>
+    <div>
       <h2>Search and add a pin</h2>
       <label>
         <gmap-autocomplete
@@ -11,7 +11,7 @@
       <br/>
 
     </div>
-    <br> -->
+    <br>
     <gmap-map
       :center="center"
       :zoom="12"
@@ -30,20 +30,21 @@
 <script>
 export default {
   name: "GoogleMap",
+  props: ["teacherAddress"],
   data() {
     return {
+      // default to Montreal to keep it simple
+      // change this to whatever makes sense
       center: { lat: 39.742043, lng: -104.991531 },
-      markers: [{
-        position: { lat: 39.7577, lng: -105.0070 }
-      }],
+      markers: [],
       places: [],
       currentPlace: null
     };
   },
 
-  // mounted() {
-  //   this.geolocate();
-  // },
+  mounted() {
+    this.geolocate();
+  },
 
   methods: {
     // receives a place object via the autocomplete component
@@ -61,15 +62,16 @@ export default {
         this.center = marker;
         this.currentPlace = null;
       }
+    },
+    geolocate: function() {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.center = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+      });
     }
-    // geolocate: function() {
-    //   navigator.geolocation.getCurrentPosition(position => {
-    //     this.center = {
-    //       lat: position.coords.latitude,
-    //       lng: position.coords.longitude
-    //     };
-    //   });
-    // }
   }
 };
 </script>
+

@@ -4,9 +4,8 @@
     <h6 class="mdc-typography--subtitle1 font-color">Teacher: {{teacher.name}}</h6>
     <h5 class="mdc-typography--headline5 font-color text-underline">Supplies</h5>
     <p class="mdc-typography--headline4 font-color">{{donation.name}}</p>
-    
     <ul class="mdc-list">
-     <li class='class="mdc-list-item" mdc-typography--body1 font-color'>{{donation.supply_name}}</li>
+      <li class='class="mdc-list-item" mdc-typography--body1 font-color'>{{donation.supply_name}}</li>
     </ul>
     <button @click="goToThankYou" class="button mdc-typography--button text-decoration">DONATE</button>
   </div>
@@ -72,8 +71,6 @@ ul {
   padding: 5px;
   color: #000000;
   border-radius: 5px;
-  
-  
 }
 body {
   margin: 0;
@@ -82,6 +79,5 @@ body {
     url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
   background-size: cover;
   height: 100%;
-  
 }
 </style>

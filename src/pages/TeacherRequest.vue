@@ -81,7 +81,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vw;
+    height: 50vw;
     width: 100vw;
     margin: 0;
     left: 0;
