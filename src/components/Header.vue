@@ -28,9 +28,21 @@ export default {
         width: 100%;
         margin-bottom: 10%;
     }
+
+    h1{
+        margin-left: 20px;
+    }
     nav a {
-        border: 1px solid white;
-        padding: 5px;
+        border: 2px solid white;
+        padding: 10px;
+        margin: 5px;
+        margin-right: 20px;
         color: white;
+    }
+
+    nav a:hover {
+        background-color: white;
+        color: black;
+        box-shadow:  inset 0 0 0 3px  white;
     }
 </style>
