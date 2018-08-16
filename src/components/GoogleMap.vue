@@ -30,6 +30,7 @@
 <script>
 export default {
   name: "GoogleMap",
+  props: ["teacherAddress"],
   data() {
     return {
       // default to Montreal to keep it simple
