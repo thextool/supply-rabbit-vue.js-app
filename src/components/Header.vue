@@ -26,6 +26,7 @@ export default {
         top: 0;
         left: 0;
         width: 100%;
+        margin-bottom: 10%;
     }
 
     h1{
