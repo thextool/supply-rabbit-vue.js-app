@@ -10,36 +10,36 @@ import ThankYou from '@/pages/ThankYou';
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'LandingPage',
-      component: LandingPage,
-    },
-    {
-      path: '/teachers',
-      name: 'Teachers',
-      component: Teachers
-    },
-    {
-      path: '/request=:id',
-      name: 'TeacherRequest',
-      component: TeacherRequest,
-    },
-    {
-      path: '/donations',
-      name: 'Donations',
-      component: Donations,
-    },
-    {
-      path: '/checkout',
-      name: 'DonationCheckout',
-      component: DonationCheckout,
-    },
-    {
-      path: '/thankyou',
-      name: 'ThankYou',
-      component: ThankYou,
-    },
-  ],
+      routes: [
+        {
+          path: '/',
+          name: 'LandingPage',
+          component: LandingPage,
+        },
+        {
+          path: '/teachers',
+          name: 'Teachers',
+          component: Teachers
+        },
+        {
+          path: '/request=:id',
+          name: 'TeacherRequest',
+          component: TeacherRequest,
+        },
+        {
+            path: '/donations',
+            name: 'Donations',
+            component: Donations,
+        },
+        {
+            path: '/checkout/:id',
+            name: 'DonationCheckout',
+            component: DonationCheckout,
+        },
+        {
+            path: '/thankyou',
+            name: 'ThankYou',
+            component: ThankYou,
+        },
+    ],
 });

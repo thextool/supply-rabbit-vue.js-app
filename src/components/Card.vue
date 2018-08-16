@@ -1,35 +1,31 @@
 <template>
-<router-link to='checkout'>
-  <div id= 'card' class='donations-card'>
-      <h5>School name</h5>
-      <h6>Teacher</h6>
+  <router-link :to="`checkout/${donation.id}`"> 
+    <div id='card' class='donations-card'>
+      <h5 class="mdc-typography--headline4">{{donation.school}}</h5>
+      <h6 class="mdc-typography--headline6">{{donation.name}}</h6>
       <p>Items</p>
       <ul>
-        <li>Item1</li>
-        <li>Item2</li>
-        <li>Item3</li>
-      </ul>
-
+        <li>{{ donation.supply_name }}</li>
+      </ul> 
     </div>
-    </router-link>
-    
+  </router-link>    
 </template>
 
 <script>
-
 export default {
-name: 'Card'
+  name: "Card",
+  props: ['donation']
 };
 </script>
 
 <style>
-
-.font{
+.font {
   color: #000000;
 }
 .donations-card {
   background: #ffffff;
   height: 350px;
   width: 350px;
+  margin: 16px;
 }
 </style>
