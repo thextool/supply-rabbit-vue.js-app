@@ -5,9 +5,9 @@
     <h4 class="mdc-typography--headline4">{{donation.name}}</h4>
     <h6 class="mdc-typography--headline6">Supplies</h6>
     <ul>
-     <li>{{donation.supply_name}}</li>
+      <li>{{donation.supply_name}}</li>
     </ul>
-    <router-link to="thankyou" class="button">DONATE</router-link>
+    <button @click="goToThankYou" class="button">DONATE</button>
   </div>
 </template>
 
@@ -37,7 +37,10 @@ export default {
     fetchTeacher(id) {
       fetch(`https://supply-rabbit-server.herokuapp.com/teachers/${id}`)
         .then(response => response.json())
-        .then(data => (this.teacher = data.teachers));
+        .then(data => (this.teacher = data.teachers))
+    },
+    goToThankYou() {
+      location.replace(`http://localhost:8080/#/thankyou=${this.$route.params.id}`)
     }
   }
 };

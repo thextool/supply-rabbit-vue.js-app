@@ -1,6 +1,9 @@
 <template>
 <div>
-    <div id="Main"><h1>Brochure</h1></div>
+    <div id="Main">
+        <h1>You Make A Difference.</h1>
+        <h2>We Make It Easier.</h2>
+        </div>
     <router-view/>
 </div>
 </template>
@@ -17,16 +20,15 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
 background-size: cover;
 height: 100%;
+/* overflow: hidden; */
 }
 h1 {
 color: white;
 }
 #Main {
-    border: 5px solid white;
-    position: absolute;
-    height: 20vw;
-    width: 40vw;
-    left: 30vw;
-    top: 20vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 20vw;
 }
 </style>

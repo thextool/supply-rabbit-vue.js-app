@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="`checkout/${donation.id}`"> 
+  <router-link :to="`checkout=${donation.id}`"> 
     <div id='card' class='donations-card'>
       <h5 class="mdc-typography--headline4">{{donation.school}}</h5>
       <h6 class="mdc-typography--headline6">{{donation.name}}</h6>
