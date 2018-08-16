@@ -1,7 +1,7 @@
 <template>
 <div class="font">
   <h1>Thank You</h1>
-  <p>Send donation to 1644 Platte St, Denver, CO 80202</P>
+  <p>Thank you for your donation, please send supplies to {{teacherAddress}}</p>
   <router-link to='donations'>DONATE MORE</router-link>
   <router-link to='/'>HOME</router-link>
   <div>
@@ -18,6 +18,18 @@ name: "ThankYou",
 components:{
     GoogleMap
 },
+data() {
+  return {
+  params: window.location.href.split('=')[1],
+  teacherAddress: ""
+  }
+},
+created() {
+  let params = window.location.href.split('=')[1]
+  fetch(`https://supply-rabbit-server.herokuapp.com/teachers/${params}`)
+  .then(response => response.json())
+  .then(teachers => this.teacherAddress = teachers.teachers.address)
+}
 };
 </script>
 
