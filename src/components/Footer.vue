@@ -2,7 +2,7 @@
 
 <template>
     <div id="Footer">
-    <h1>Footer</h1>
+    <small>&copy; 2018 Supply Rabbit - All Rights Reserved</small>
     </div>
 </template>
 
@@ -14,9 +14,13 @@ export default {
 
 <style>
 #Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-top: 2px solid black;
     position: fixed;
     bottom: 0;
+    height: 10%;
     width: 100%;
     left: 0;
     background: black;

@@ -37,4 +37,7 @@ export default {
   border-radius: 5px;
 }
 
+.donations-card:hover {
+  	box-shadow: inset 0 0 0 3px  black;
+}
 </style>
