@@ -3,10 +3,10 @@
     <div id='card' class='donations-card'>
       <h5 class="mdc-typography--headline5 ">{{donation.school}}</h5>
       <h6 class="mdc-typography--subtitle1">{{donation.name}}</h6>
-      <h5 class="mdc-typography--headline5 text-underline">Items</h5>
-      <ul class="mdc-list">
+      <!-- <h5 class="mdc-typography--headline5 text-underline">Items</h5> -->
+      <!-- <ul class="mdc-list">
         <li class="mdc-list-item text-decoration">{{ donation.supply_name }}</li>
-      </ul> 
+      </ul>  -->
     </div>
   </router-link>    
 </template>
@@ -29,9 +29,10 @@ export default {
   text-decoration:underline;
 }
 .donations-card {
-  background: #ffffff;
-  height: 300px;
-  width: 300px;
+  color: black;
+  background-image: linear-gradient(rgba(255,255,255,0.9), rgba(0,0,0,0));
+  height: 15vw;
+  width: 20vw;
   margin: 16px;
   padding: 3%;
   border-radius: 5px;
@@ -39,5 +40,9 @@ export default {
 
 .donations-card:hover {
   	box-shadow: inset 0 0 0 3px  black;
+}
+.donations-card:active {
+  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(0,0,0,0));
+  box-shadow: inset 0 0 0 3px  rgba(0,0,0,0.5);
 }
 </style>
