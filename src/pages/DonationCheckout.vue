@@ -5,7 +5,7 @@
     <h4 class="mdc-typography--headline4">{{donation.name}}</h4>
     <h6 class="mdc-typography--headline6">Supplies</h6>
     <ul>
-     <li>{{donation.supply_name}}</li>
+      <li>{{donation.supply_name}}</li>
     </ul>
     <router-link to="thankyou" class="button">DONATE</router-link>
   </div>

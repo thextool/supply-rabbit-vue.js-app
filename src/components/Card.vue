@@ -28,4 +28,9 @@ export default {
   width: 350px;
   margin: 16px;
 }
+
+.donations-card:hover{
+  box-shadow:  inset 0 0 0 3px  black;
+
+}
 </style>

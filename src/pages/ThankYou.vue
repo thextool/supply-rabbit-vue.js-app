@@ -1,7 +1,7 @@
 <template>
 <div class="font">
   <h1>Thank You</h1>
-  <p>Send donation to 1644 Platte St, Denver, CO 80202</P>
+  <p></P>
   <router-link to='donations'>DONATE MORE</router-link>
   <router-link to='/'>HOME</router-link>
   <div>
