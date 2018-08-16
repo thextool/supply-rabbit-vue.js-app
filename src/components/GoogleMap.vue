@@ -13,6 +13,7 @@
     </div>
     <br>
     <gmap-map
+      id="map"
       :center="center"
       :zoom="12"
       style="width:100%;  height: 400px;"
@@ -42,9 +43,9 @@ export default {
     };
   },
 
-  mounted() {
-    this.geolocate();
-  },
+  // mounted() {
+  //   this.geolocate();
+  // },
 
   methods: {
     // receives a place object via the autocomplete component
@@ -63,14 +64,14 @@ export default {
         this.currentPlace = null;
       }
     },
-    geolocate: function() {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.center = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-      });
-    }
+    // geolocate: function() {
+    //   navigator.geolocation.getCurrentPosition(position => {
+    //     this.center = {
+    //       lat: position.coords.latitude,
+    //       lng: position.coords.longitude
+    //     };
+    //   });
+    // }
   }
 };
 </script>

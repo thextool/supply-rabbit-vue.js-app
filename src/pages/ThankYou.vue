@@ -2,8 +2,8 @@
 <div class="font">
   <h1>Thank You</h1>
   <p>Thank you for your donation, please send supplies to {{teacherAddress}}</p>
-  <router-link to='donations'>DONATE MORE</router-link>
-  <router-link to='/'>HOME</router-link>
+  <router-link to='donations' @click='deleteRequest'>DONATE MORE</router-link>
+  <router-link to='/' @click='deleteRequest'>HOME</router-link>
   <div>
     <GoogleMap/>
   </div>   
@@ -29,8 +29,20 @@ created() {
   fetch(`https://supply-rabbit-server.herokuapp.com/teachers/${params}`)
   .then(response => response.json())
   .then(teachers => this.teacherAddress = teachers.teachers.address)
+},
+methods:{
+  deleteRequest(){
+  let params = window.location.href.split('=')[1]
+    fetch(`https://supply-rabbit-server.herokuapp.com/supplies/${params}`,{
+      method:'DELETE',
+      headers:{
+      'Content-Type': 'application/json'
+    }})
+    .then(response => response.json)
+    .then(response => console.log(response))
+  }
 }
-};
+}
 </script>
 
 <style>
