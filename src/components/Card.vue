@@ -1,43 +1,25 @@
 <template>
- <router-link to='checkout'> 
-  <div id= 'card' class='donations-card'>
-    
-      <h5>{{result}}
-      <!-- <h6>{{}}</h6>
+  <router-link :to="`checkout/${donation.id}`"> 
+    <div id='card' class='donations-card'>
+      <h5 class="mdc-typography--headline4">{{donation.school}}</h5>
+      <h6 class="mdc-typography--headline6">{{donation.name}}</h6>
       <p>Items</p>
-      <ul >
-       <li v-for="item in supply_name" :key="item.id" class="font">{{item}}</li>
-      </ul> --> 
-
+      <ul>
+        <li>{{ donation.supply_name }}</li>
+      </ul> 
     </div>
-    </router-link>
-    
+  </router-link>    
 </template>
 
 <script>
-
 export default {
-name: 'Card',
-data(){
-  return{
-  methods:{
-    populateCards(){
-      const API_URL = 'https://supply-rabbit-server.herokuapp.com/supplies;'
-      fetch(API_URL)
-      .then(res=>res.json())
-      .then(result=>{
-        console.log(data)
-          })
-        }
-      }
-    };
-  }       
+  name: "Card",
+  props: ['donation']
 };
 </script>
 
 <style>
-
-.font{
+.font {
   color: #000000;
 }
 .donations-card {
@@ -45,6 +27,5 @@ data(){
   height: 350px;
   width: 350px;
   margin: 16px;
-  
 }
 </style>
