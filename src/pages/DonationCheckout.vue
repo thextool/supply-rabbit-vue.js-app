@@ -1,13 +1,14 @@
 <template>
-  <div class='font' style="background-color:white; color: black; ">
-    <div>Teacher: {{teacher.name}}</div>
-    <h3 class="mdc-typography--headline3">{{donation.school}}</h3>
-    <h4 class="mdc-typography--headline4">{{donation.name}}</h4>
-    <h6 class="mdc-typography--headline6">Supplies</h6>
-    <ul>
-     <li>{{donation.supply_name}}</li>
+  <div class="margin-top">
+    <h5 class="mdc-typography--headline5 font-color">School: {{donation.school}}</h5>
+    <h6 class="mdc-typography--subtitle1 font-color">Teacher: {{teacher.name}}</h6>
+    <h5 class="mdc-typography--headline5 font-color text-underline">Supplies</h5>
+    <p class="mdc-typography--headline4 font-color">{{donation.name}}</p>
+    
+    <ul class="mdc-list">
+     <li class='class="mdc-list-item" mdc-typography--body1 font-color'>{{donation.supply_name}}</li>
     </ul>
-    <router-link to="thankyou" class="button">DONATE</router-link>
+    <router-link to="thankyou" class="button mdc-typography--button text-decoration">DONATE</router-link>
   </div>
 </template>
 
@@ -44,10 +45,22 @@ export default {
 </script>
 
 <style>
-.font {
+.margin-top{
   margin-top: 15%;
+}
+.font-color {
   color: #ffffff;
 }
+.text-decoration{
+  text-decoration: none;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
 ul {
   list-style-type: none;
 }
@@ -55,6 +68,9 @@ ul {
   background: #ffffff;
   padding: 5px;
   color: #000000;
+  border-radius: 5px;
+  
+  
 }
 body {
   margin: 0;
@@ -63,6 +79,6 @@ body {
     url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
   background-size: cover;
   height: 100%;
-  text-align: center;
+  
 }
 </style>
