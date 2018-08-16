@@ -20,7 +20,7 @@ export default {
         align-items: center;
         justify-content: space-between;
         border-bottom: 2px solid black;
-        background: black;
+        background: rgba(0, 0, 0, 0.50);
         color: white;
         position: fixed;
         top: 0;
@@ -28,21 +28,42 @@ export default {
         width: 100%;
         margin-bottom: 10%;
     }
-
-    h1{
-        margin-left: 20px;
+    #Header h1:active {
+        transition: 0.4s;
+        color: cadetblue;
+        
+    }
+    #Header h1 {
+        transition: 0.4s;
+        margin-left: 2vw;
+        text-shadow: 5px 4px 0px rgba(255, 255, 255, 0.25), 4px 3px 0px rgba(0, 0, 0, 0.75);
+    }
+    nav {
+        margin-right: 2vw;
     }
     nav a {
+        transition: 0.2s;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        text-decoration: none;
         border: 2px solid white;
-        padding: 10px;
-        margin: 5px;
-        margin-right: 20px;
+        padding: 0.5vw;
+        margin: 0.5vw;
         color: white;
     }
-
     nav a:hover {
+        transition: 0.2s;
         background-color: white;
         color: black;
         box-shadow:  inset 0 0 0 3px  white;
+    }
+    nav a:active {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+        border-style: hidden;
+        color: white;
+    }
+    a {
+        text-decoration: none;
     }
 </style>

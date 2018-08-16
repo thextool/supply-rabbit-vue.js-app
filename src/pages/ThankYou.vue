@@ -1,5 +1,5 @@
 <template>
-<div class="font">
+<div class="font" id="ThankYou">
   <h1>Thank You</h1>
   <p>Thank you for your donation, please send supplies to {{teacherAddress}}</p>
   <router-link to='donations'>DONATE MORE</router-link>
@@ -38,10 +38,32 @@ created() {
   margin-top: 10%;
   color: #ffffff;
 }
-body {
-background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
-background-size: cover;
-height: 100%;
+#ThankYou h1 {
+    font-size: 2.5em;
+}
+#ThankYou p {
+  margin: 2em;
+}
+#ThankYou a {
+  transition: 0.2s;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px;
+  margin: 1em;
+  color: white;
+}
+#ThankYou a:hover {
+  transition: 0.2s;
+  background-color: white;
+  color: black;
+  box-shadow:  inset 0 0 0 3px  white;
+}
+#ThankYou a:active {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  border-style: hidden;
+  color: white;
 }
 </style>

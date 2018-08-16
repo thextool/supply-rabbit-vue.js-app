@@ -1,11 +1,11 @@
 <template>
   <div class="margin-top">
-    <h5 class="mdc-typography--headline5 font-color">School: {{donation.school}}</h5>
-    <h6 class="mdc-typography--subtitle1 font-color">Teacher: {{teacher.name}}</h6>
-    <h5 class="mdc-typography--headline5 font-color text-underline">Supplies</h5>
+    <!-- <h5 class="mdc-typography--headline5 font-color">School: {{donation.school}}</h5> -->
+    <h5 class="mdc-typography--headline5 font-color">Teacher: {{teacher.name}}</h5>
+    <h5 class="mdc-typography--headline5 font-color text-underline">Supplies Needed</h5>
     <p class="mdc-typography--headline4 font-color">{{donation.name}}</p>
     <ul class="mdc-list">
-      <li class='class="mdc-list-item" mdc-typography--body1 font-color'>{{donation.supply_name}}</li>
+      <li class='class="mdc-list-item" mdc-typography--body1 font-color'>{{donation.supply_name}} x {{donation.quantity_needed}}</li>
     </ul>
     <button @click="goToThankYou" class="button mdc-typography--button text-decoration">DONATE</button>
   </div>
@@ -75,9 +75,5 @@ ul {
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("https://cbsla.files.wordpress.com/2015/09/shutterstock_200876306.jpg");
-  background-size: cover;
-  height: 100%;
 }
 </style>
