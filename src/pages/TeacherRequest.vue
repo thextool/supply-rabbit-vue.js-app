@@ -13,7 +13,8 @@
         <div id="Cart">
             <h1>Cart</h1>
             <ul>
-                <li v-for="cartItem in cartItems">
+                <li v-for="cartItem in cartItems"
+                    v-bind:key="cartItem.id">
                     <span class="cartItem">
                         Item: {{cartItem.supply_name}} | 
                         Quantity: {{cartItem.quantity_needed}}
@@ -54,18 +55,11 @@ export default {
         },
         submitCart() {
             let params = window.location.href.split('=')[1]
-            let supplyObject = [
-                {
+            let supplyObject = {
                     "supply_name": this.cartItems[0].supply_name,
                     "quantity_needed": this.cartItems[0].quantity_needed,
                     "teacher_id": params
-                },
-                {
-                    "supply_name": this.cartItems[1].supply_name,
-                    "quantity_needed": this.cartItems[1].quantity_needed,
-                    "teacher_id": params
                 }
-            ]
             fetch('https://supply-rabbit-server.herokuapp.com/supplies', {
                 method: 'POST',
                 headers:{
@@ -74,7 +68,8 @@ export default {
                 body: JSON.stringify(supplyObject)
             })
             .then(response => response.json())
-            .then(response => console.log(response))
+            // .then(response => console.log(response))
+            .then(teachers => location.replace('http://localhost:8080/#/donations'))
         }
     }
 }

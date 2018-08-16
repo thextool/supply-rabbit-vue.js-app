@@ -7,7 +7,7 @@
     <ul class="mdc-list">
       <li class='class="mdc-list-item" mdc-typography--body1 font-color'>{{donation.supply_name}}</li>
     </ul>
-    <router-link to="thankyou" class="button mdc-typography--button text-decoration">DONATE</router-link>
+    <button @click="goToThankYou" class="button mdc-typography--button text-decoration">DONATE</button>
   </div>
 </template>
 
@@ -37,7 +37,10 @@ export default {
     fetchTeacher(id) {
       fetch(`https://supply-rabbit-server.herokuapp.com/teachers/${id}`)
         .then(response => response.json())
-        .then(data => (this.teacher = data.teachers));
+        .then(data => (this.teacher = data.teachers))
+    },
+    goToThankYou() {
+      location.replace(`http://localhost:8080/#/thankyou=${this.$route.params.id}`)
     }
   }
 };
