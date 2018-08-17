@@ -1,6 +1,27 @@
+Supply Rabbit  - A solution for teachers need supplies in the classroom.
+Deployed links:
+Frontend - supply-rabbit-96c3e.firebaseapp.com
+Backend(API) - https://supply-rabbit-server.herokuapp.com/supplies
+Link to Backend repo:
+https://github.com/MattHuston1/SupplyRabbitServer
+Problem we are solving with Supply Rabbit:
+It is a well known fact that many students and teachers struggle to obtain all their necessary school supplies in a given year.
+Who is this App for?
+CRāV is for anybody that has ever had a difficult time picking a restaurant. Anybody who has even been paralyzed by indecision while looking for a place to eat, this is for you.
+Elevator pitch
+Supply Rabbit is an application where school teachers can request help to obtain the materials they need to make projects in their classes and where people can donate these materials.
+Collaborators:
+Matthew Riach
+Robert Connell
+Matt Huston
+Belinda Galiano
+Instructions
+
 # landing-page
 
 > A Vue.js project
+
+> Develop an application where school teachers can request help to obtain the materials they need to make projects in their classes and where people can donate these materials.
 
 ## Build Setup
 
