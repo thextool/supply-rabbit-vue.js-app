@@ -46,7 +46,7 @@ export default {
             body: JSON.stringify(teacherObject)
         })
         .then(response => response.json())
-        .then(teachers => location.replace(`http://localhost:8080/#/request=${teachers.teachers.id}`))
+        .then(teachers => location.replace(`https://supply-rabbit-96c3e.firebaseapp.com/#/request=${teachers.teachers.id}`))
         }
     }
 };
