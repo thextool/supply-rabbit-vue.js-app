@@ -4,9 +4,9 @@
       <h5 class="mdc-typography--headline5 ">{{donation.school}}</h5>
       <h6 class="mdc-typography--subtitle1">{{donation.name}}</h6>
       <!-- <h5 class="mdc-typography--headline5 text-underline">Items</h5> -->
-      <!-- <ul class="mdc-list">
-        <li class="mdc-list-item text-decoration">{{ donation.supply_name }}</li>
-      </ul>  -->
+      <!-- <ul class="mdc-list"> -->
+        <!-- <li class="mdc-list-item text-decoration">{{ donation.supply_name }}</li> -->
+      <!-- </ul>  -->
     </div>
   </router-link>    
 </template>
@@ -31,7 +31,7 @@ export default {
 .donations-card {
   color: black;
   background-image: linear-gradient(rgba(255,255,255,0.9), rgba(0,0,0,0));
-  height: 15vw;
+  height: 25vw;
   width: 20vw;
   margin: 16px;
   padding: 3%;

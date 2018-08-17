@@ -69,7 +69,7 @@ export default {
             })
             .then(response => response.json())
             // .then(response => console.log(response))
-            .then(teachers => location.replace('http://localhost:8080/#/donations'))
+            .then(teachers => location.replace('https://supply-rabbit-96c3e.firebaseapp.com/#/donations'))
         }
     }
 }

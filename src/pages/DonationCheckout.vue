@@ -40,7 +40,7 @@ export default {
         .then(data => (this.teacher = data.teachers))
     },
     goToThankYou() {
-      location.replace(`http://localhost:8080/#/thankyou=${this.$route.params.id}`)
+      location.replace(`https://supply-rabbit-96c3e.firebaseapp.com/#/thankyou=${this.$route.params.id}`)
     }
   }
 };
